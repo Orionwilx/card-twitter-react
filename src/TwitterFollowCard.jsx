@@ -3,7 +3,6 @@ import { useState } from "react";
 export function TwitterFollowCard({
   name = "unknown",
   userName = "unknown",
-  formatUserName,
   initialIsFollowing,
   children,
 }) {
@@ -37,9 +36,7 @@ export function TwitterFollowCard({
         />
         <div className="tw-follow-card-info">
           <strong>{name}</strong>
-          <span className="tw-follow-card-infoUserName">
-            {formatUserName(userName)}
-          </span>
+          <span className="tw-follow-card-infoUserName">{`@${userName}`}</span>
         </div>
       </header>
       <aside>
